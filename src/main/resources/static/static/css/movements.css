@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ECF0F1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper .sidebar {
+    background:  #369AD9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .enterpriseImage {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.wrapper .sidebar .enterpriseImage img {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.wrapper .sidebar ul li a {
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #66ADD8;
+    color: #FDFEFE;
+    font-size: 14px;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;;
+}
+
+.wrapper .sidebar ul li a .icon {
+    color:#F0F2F2;
+    width: 30px;
+    display: inline-block;
+}
+
+/* link hover */
+
+.wrapper .sidebar ul li a:hover {
+    color: #369AD9;
+    background-color:white ;
+    border-top: 2px solid #66ADD8;
+}
+
+.wrapper .sidebar ul li a:hover .icon {
+    color: #369AD9;
+
+}
+
+.wrapper .sidebar ul li a:hover::before {
+    display: block;
+
+}
+
+.wrapper .section {
+    width: calc(100%- 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top-navbar {
+    background-color:#369AD9;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+/* form style */
+
+#tableContainer{
+    width: 86%;
+    position: fixed;
+    right: 0;
+    left: 225px;
+}
+
+table{
+    border-spacing: 0;
+    border-radius: 5px;
+    border-bottom: none;
+    width: 90%;
+    margin-top: 50px;
+    background:#F0F3F4;
+    padding: 50px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+.tableTitles {
+    text-align: center;
+    font-size: 20px;
+    color: #FDFEFE;
+    padding: 10px;
+    background: #369AD9;
+}
+
+#tdId {
+    font-weight: bold;
+}
+
+td {
+    text-align: center;
+    vertical-align: center;
+    border-bottom: 1px solid #66ADD8;
+    padding: 10px;
+    font-size: 15px;
+}
+
+#tableContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.formButtons {
+    border: none;
+}
+
+#buttonsContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.buttonsForm {
+    display: flex;
+    width: 45px;
+    justify-content: center;
+}
+
+#updateButton:hover {
+    color: #58D68D;
+}
+
+#deleteButton:hover {
+    color: #E74C3C;
+}

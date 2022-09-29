@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/static/css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/70baa4fbad.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/static/static/icons/iconLogo.ico">
+    <title>Iniciar sesión</title>
+</head>
+<body>
+<body>
+<div id="mainContainer">
+    <div id="secondContainer">
+        <div id="logo">
+            <img src="/static/static/images/logo-1.png" alt="">
+        </div>
+        <div id="thirdContainer">
+            <div>
+                <p id="text">Techgyment te ayuda a llevar un control de los movimientos financieros de tu empresa.</p>
+            </div>
+            <div class="buttonContainer" sec:authorize="!isAuthenticated()">
+                <a class="button" th:href="@{/oauth2/authorization/auth0}">Iniciar sesión</a>
+            </div>
+            <div class="buttonContainer" sec:authorize="isAuthenticated()">
+                <a id="button" th:href="@{/transactions}">Llévame a la aplicación</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>

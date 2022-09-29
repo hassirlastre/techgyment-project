@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/static/css/new-movement.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/70baa4fbad.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/static/static/icons/iconLogo.ico">
+    <title>Nueva transacción</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+           <!--enterprise image-->
+           <div class="enterpriseImage">
+            <img src="/static/static/images/logo.png" alt="logo">
+           </div>
+           <!--Menu item-->
+           <ul>
+            <li><a href="http://localhost:8080/transactions">
+                <span class="icon"><i class="fa-solid fa-money-bill-transfer"></i></span>
+                <span class="item">Movimientos</span>
+            </a></li>
+            <li><a href="http://localhost:8080/transactions/new">
+                <span class="icon"><i class="fa-solid fa-arrow-down-up-across-line"></i></span>
+                <span class="item">Nueva transacción</span>
+            </a></li>
+            <li><a href="http://localhost:8080/enterprises/new">
+                <span class="icon"><i class="fa-solid fa-building"></i></span>
+                <span class="item">Nueva empresa</span>
+            </a></li>
+            <li><a href="http://localhost:8080/employees/new">
+                <span class="icon"><i class="fa-solid fa-user-tie"></i></span>
+                <span class="item">Nuevo empleado</span>
+            </a></li>
+           </ul>
+        </div>
+        <div class="section">
+            <div class="top-navbar"></div>
+        </div>
+        <div id="formContainer">
+            <form th:action="@{/movements}" th:method="post" th:object="${movements}" id="form">
+                <div id="titleContainer">
+                    <p>Nueva transacción</p>
+                </div>
+                <div class="inputContainer">
+                    <input type="text" placeholder="Concepto" class="inputContainerField" id="inputConcept" th:field="*{concept}" >
+                </div>
+                <div class="inputContainer">
+                    <input type="text as" placeholder="Cantidad" class="inputContainerField" id="inputAmount" th:field="*{amount}">
+                </div>
+                <div class="inputContainer">
+                    <input type="text" placeholder="Empleado" class="inputContainerField" id="inputEmployee" th:field="*{employee}">
+                </div>
+                <div class="inputContainer">
+                    <input type="text" placeholder="Empresa" class="inputContainerField" id="inputEnterprise" th:field="*{enterprise}">
+                </div>
+                <!--
+                <div class="inputContainer">
+                    <input type="date" placeholder="Fecha" class="inputContainerField" id="inputDate" th:field="*{created_at}">
+                </div> -->
+                <div id="buttonContainer">
+                    <button class="button" type="submit">Crear</button>
+                    <button class="button" type="reset">Borrar todo</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
