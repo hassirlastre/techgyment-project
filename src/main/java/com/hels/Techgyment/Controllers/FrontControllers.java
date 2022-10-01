@@ -21,7 +21,7 @@ public class FrontControllers {
         this.service = service;
     }
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String home(Model model, @AuthenticationPrincipal OidcUser principal) {
         return "login";
     }
