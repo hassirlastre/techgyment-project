@@ -34,18 +34,18 @@ public class FrontControllers {
         return "movements";
     }
 
-    @GetMapping("/transactions/new")
+    @GetMapping("/new-transactions")
     public String newMovement(Model model){
         model.addAttribute("movements", new Movement());
         return "new-movement";
     }
 
-    @GetMapping("/employees/new")
+    @GetMapping("/new-employees")
     public String newEmployee(Model model){
         model.addAttribute("employees", new Employee());
         return "new-employee";
     }
-    @GetMapping("/enterprises/new")
+    @GetMapping("/new-enterprises")
     public String newEnterprise(Model model){
         model.addAttribute("enterprises", new Enterprise());
         return "new-enterprise";
